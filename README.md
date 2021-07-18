@@ -1,15 +1,13 @@
 # Go cheatsheet
 
 ### Variables in Go
-
-#### Approach 1
-Declare the variable using var and the variable datatype as below
 ```go
+/*Approach 1*/
+/*Declare the variable using var and the variable datatype as below*/
 var card string = "Ace of spades"
-```
-#### Approach 2
-Here, Go assumes the datatype of the variable using the value assigned to it
-```go
+
+/*Approach 2*/
+/*Here, Go assumes the datatype of the variable using the value assigned to it*/
 card := "Ace of spades"
 ```
 
@@ -47,6 +45,27 @@ slice[startIndex:] --Fetch all the elements from the start index till the end
 ```
 
 ### Functions
+```go
+/*Function without a return value*/
+func printDeck() {
+    cards := newDeck()
+    cards.print()
+}
+
+/*Function with a return value*/
+func newDeck() deck {
+    cards := newDeck()
+    return cards		
+}
+
+/*Function with arguments and multiple return values*/
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
+}
+
+/*Assigning multiple return values to variables*/
+hand, remainingCards := deal(cards, 5)
+```
 
 
 
