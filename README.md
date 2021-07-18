@@ -23,6 +23,31 @@ func (d deck) print() {
 }
 ```
 
+### Slices
+```go
+/*Define a slice*/
+cards := []string{"a","b"}
+
+/*Add elements to slice*/
+cards := append(cards,"c")
+
+/*Iterating a slice*/
+for _, card := range cards {
+	fmt.Println(card)
+}
+
+/*Splitting a slice. Approach 1*/
+slice[startIndexIncluding, endIndexNotIncluding]
+
+/*Splitting a slice. Approach 2*/
+slice[:endIndexNotIncluding] --Fetch all the elements from start till the end index
+
+/*Splitting a slice. Approach 3*/
+slice[startIndex:] --Fetch all the elements from the start index till the end
+```
+
+### Functions
+
 
 
 
