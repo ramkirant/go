@@ -9,6 +9,9 @@ var card string = "Ace of spades"
 /*Approach 2*/
 /*Here, Go assumes the datatype of the variable using the value assigned to it*/
 card := "Ace of spades"
+
+/*Type Conversion*/
+byteSlice := []byte("Hi There")
 ```
 
 ### Custom datatypes with receivers
