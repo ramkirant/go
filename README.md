@@ -45,6 +45,12 @@ slice[:endIndexNotIncluding] --Fetch all the elements from start till the end in
 
 /*Splitting a slice. Approach 3*/
 slice[startIndex:] --Fetch all the elements from the start index till the end
+
+/*Length of a slice*/
+len(slice)
+
+/*Convert a slice of string to a single string*/
+strings.Json(stringSlice, ",")
 ```
 
 ### Functions
@@ -70,7 +76,11 @@ func deal(d deck, handSize int) (deck, deck) {
 hand, remainingCards := deal(cards, 5)
 ```
 
-
-
-
-
+### Null check in go
+Use nil for all null checks in go
+```go
+if error != nil {
+	fmt.Println("Error: ",error)
+	os.Exit(1)
+}
+```
