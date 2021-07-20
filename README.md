@@ -84,3 +84,40 @@ if error != nil {
 	os.Exit(1)
 }
 ```
+
+### struts
+```go
+/*Declare a strut*/
+type contactInfo struct {
+	email   string
+	zipCode int
+}
+
+type person struct {
+	firstName string
+	lastName  string
+	contactInfo		//If we have to declare one strut inside another, we can just give its name.
+}
+
+/*Assign values to strut (Least desirable) - Approach 1*/
+deadpool := person{"Ryan", "Renolds"}
+
+/*Assign values to strut - Approach 2*/
+var captainAmerica person
+captainAmerica.firstName = "Steve"
+captainAmerica.lastName = "Rodgers"
+
+/*Assign values to strut - Approach 3*/
+/*For multiline declaration, it is mandatory to end all the lines with a comma*/
+ironMan := person{
+	firstName: "Tony",
+	lastName:  "Stark",
+	contactInfo: contactInfo{
+		email:   "tonystark@starkindustries.com",
+		zipCode: 10010,
+	},
+}
+
+/*Print formatted output of strut*/
+fmt.Printf("%+v", ironMan)
+```
