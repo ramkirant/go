@@ -23,6 +23,43 @@ func (d deck) print() {
     }
 }
 ```
+### if else
+```go
+if  condition-1 { 
+    // code to be executed if condition-1 is true
+} 
+else if condition-2 {
+    // code to be executed if condition-2 is true
+} 
+else {
+    // code to be executed if both condition1 and condition2 are false
+}
+```
+
+### if else with initialization
+```go
+if x := 100; x == 100 {
+	fmt.Println("Germany")
+}
+```
+
+### Switch case
+```go
+switch today.Day() {
+	case 5:
+		fmt.Println("Today is 5th. Clean your house.")
+	case 10:
+		fmt.Println("Today is 10th. Buy some wine.")
+	case 15:
+		fmt.Println("Today is 15th. Visit a doctor.")
+	case 25:
+		fmt.Println("Today is 25th. Buy some food.")
+	case 31:
+		fmt.Println("Party tonight.")
+	default:
+		fmt.Println("No information available for that day.")
+}
+```
 
 ### Slices
 ```go
