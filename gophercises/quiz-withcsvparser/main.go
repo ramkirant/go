@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"math/rand"
 	"os"
+	"strings"
 	"time"
 )
 
@@ -58,7 +59,7 @@ func executeTheQuiz(qaList quizQAndAList, correctAnswers *int, c chan string) {
 		fmt.Println(q.question)
 		var input string
 		fmt.Scanln(&input)
-		if input == q.answer {
+		if strings.ToLower(strings.Trim(input, " ")) == strings.ToLower(strings.Trim(q.answer, " ")) {
 			fmt.Println("Correct")
 			*correctAnswers = *correctAnswers + 1
 		} else {
