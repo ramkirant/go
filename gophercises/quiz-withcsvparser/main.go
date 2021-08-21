@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 	"os"
 	"time"
 )
@@ -45,6 +46,14 @@ func sleep(sleepSeconds int, c chan string) {
 }
 
 func executeTheQuiz(qaList quizQAndAList, correctAnswers *int, c chan string) {
+	source := rand.NewSource(time.Now().UnixNano())
+	r := rand.New(source)
+
+	for i := range qaList {
+		nP := r.Intn(len(qaList) - 1)
+		qaList[i], qaList[nP] = qaList[nP], qaList[i]
+	}
+
 	for _, q := range qaList {
 		fmt.Println(q.question)
 		var input string
